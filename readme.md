@@ -29,14 +29,18 @@ Call Stack (most recent call first):
 ```
 
 There is an error when trying to use the generated module:
-```
+```bash
+# first run make
+make
+
+# then try to load the module
 python -c 'import tmod; print(tmod.add(20,22))'
 Traceback (most recent call last):
   File "<string>", line 1, in <module>
 ImportError: /users/bcumming/pytest/build/tmod.cpython-38-x86_64-linux-gnu.so: invalid ELF header
 ```
 
-*Note* the error occurs on the `import` statement, not the `print`.
+**Note** the error occurs on the `import` statement, not the `print`.
 
 I need a higher version of cmake for my project, which also breaks with the same warning.
 
